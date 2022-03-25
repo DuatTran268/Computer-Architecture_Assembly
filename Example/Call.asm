@@ -1,0 +1,15 @@
+.MODEL SMALL
+.STACK 100h
+.CODE
+    MOV AL, 1
+    MOV BL, 2
+    CALL m2
+    CALL m2
+    CALL m2
+    MOV AH, 4Ch
+    INT 21h 
+m2 PROC
+    MUL BL
+    RET
+m2 ENDP
+END
